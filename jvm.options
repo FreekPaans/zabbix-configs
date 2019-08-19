@@ -1,0 +1,12 @@
+# add this to the JVM opts to expose jmx so that you can connect to it via visualvm or jmc over SSH
+
+-Dcom.sun.management.jmxremote
+-Dcom.sun.management.jmxremote.port=9020
+# jmx on port 9020
+-Dcom.sun.management.jmxremote.rmi.port=9020
+# rmi registry on 9020 (LocateRegistry?)
+-Dcom.sun.management.jmxremote.authenticate=false
+-Dcom.sun.management.jmxremote.ssl=false
+
+-Djava.rmi.server.hostname=a-host-name
+# object addresses are given out to this address
